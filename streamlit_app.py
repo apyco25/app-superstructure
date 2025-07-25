@@ -4,8 +4,6 @@ import re
 from datetime import datetime
 from io import StringIO
 
-st.set_page_config(page_title="Suivi des Entraînements", layout="wide")
-st.title("📊 Super Structure | Suivi des Entraînements")
 
 st.markdown("""
 Ce tableau de bord vous permet de suivre automatiquement les entraînements de la team via les exports WhatsApp.
@@ -13,6 +11,10 @@ Ce tableau de bord vous permet de suivre automatiquement les entraînements de l
 - Les stats se mettront à jour automatiquement
 """)
 
+st.set_page_config(page_title="Suivi des Entraînements", layout="wide")
+st.title("📊 Super Structure | Suivi des Entraînements")
+
+"""
 uploaded_file = st.file_uploader("📁 Uploader le fichier .txt de l'export WhatsApp", type=["txt"])
 
 def parse_whatsapp_chat(chat_text):
@@ -65,3 +67,4 @@ if uploaded_file:
         st.dataframe(df)
 else:
     st.info("Veuillez uploader un fichier .txt exporté depuis WhatsApp.")
+"""
